@@ -16,15 +16,4 @@ public class MaxMinElements {
         }
         return maxElement;
     }
-
-    public static void main(String[] args) {
-        MaxMinElements max = new MaxMinElements();
-        ArraysCreation twoDimmArray = new ArraysCreation();
-        View view = new View();
-        Strings strings = new Strings();
-
-        int[][] array = twoDimmArray.twoDimentionalArray();
-        view.viewTwodimentionalArray(array,strings.getTwoDimentionalinitialArray());
-        max.maxTwoDimElement(array);
-    }
 }
