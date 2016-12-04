@@ -4,14 +4,6 @@ import java.util.*;
 
 public class sorting {
 
-    public int[] massiveCreation() {
-        int[] arrayForSort = new int[10];
-        for (int i = 0; i < arrayForSort.length; i++) {
-            arrayForSort[i] = (int) Math.round(Math.random() * 10);
-        }
-        return arrayForSort;
-    }
-
     public int[] bubbleSortDown(int[] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - 1; j++) {

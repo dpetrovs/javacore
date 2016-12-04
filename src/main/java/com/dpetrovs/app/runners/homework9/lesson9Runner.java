@@ -8,23 +8,39 @@ public class lesson9Runner {
         sorting sorting = new sorting();
         Strings strings = new Strings();
         View view = new View();
-        int[] initialMassive = sorting.massiveCreation();
+        ArraysCreation arrays = new ArraysCreation();
+        MaxMinElements maxMin = new MaxMinElements();
 
-        view.viewMassive(initialMassive, strings.getInitialState());
+        int[] uniDimentionalArray = arrays.uniDimentionalArray();
+        int[][] twoDimentionalarray = arrays.twoDimentionalArray();
 
-        int[] sortedBubbleDown = sorting.bubbleSortDown(initialMassive);
-        view.viewMassive(sortedBubbleDown,strings.getOrderedBubbleDown());
+        /*Activities with uni-dimentional Array*/
 
-        int[] sortedBubbleUp = sorting.bubbleSortUp(initialMassive);
-        view.viewMassive(sortedBubbleUp,strings.getOrderedBubbleUp());
+        view.viewUnidimentionalArray(uniDimentionalArray, strings.getInitialState());
 
-        int[] sortedMassiveJava = sorting.arrayToStringMethod(initialMassive);
-        view.viewMassive(sortedMassiveJava, strings.getOrderedBubbleJava());
+        int[] sortedBubbleDown = sorting.bubbleSortDown(uniDimentionalArray);
+        view.viewUnidimentionalArray(sortedBubbleDown,strings.getOrderedBubbleDown());
 
-        int[] sortedSelectionSortUp = sorting.selectionSortUp(initialMassive);
-        view.viewMassive(sortedSelectionSortUp,strings.getOrderedSelectionUp());
+        int[] sortedBubbleUp = sorting.bubbleSortUp(uniDimentionalArray);
+        view.viewUnidimentionalArray(sortedBubbleUp,strings.getOrderedBubbleUp());
 
-        int[] sortedSelectionSortDown = sorting.selectionSortDown(initialMassive);
-        view.viewMassive(sortedSelectionSortDown,strings.getOrderedSelectionDown());
+        int[] sortedMassiveJava = sorting.arrayToStringMethod(uniDimentionalArray);
+        view.viewUnidimentionalArray(sortedMassiveJava, strings.getOrderedBubbleJava());
+
+        int[] sortedSelectionSortUp = sorting.selectionSortUp(uniDimentionalArray);
+        view.viewUnidimentionalArray(sortedSelectionSortUp,strings.getOrderedSelectionUp());
+
+        int[] sortedSelectionSortDown = sorting.selectionSortDown(uniDimentionalArray);
+        view.viewUnidimentionalArray(sortedSelectionSortDown,strings.getOrderedSelectionDown());
+
+        /*End of ctivities with uni-dimentional Array*/
+
+        /*Activities with two-dimentional Array*/
+
+        view.viewTwodimentionalArray(twoDimentionalarray,strings.getTwoDimentionalinitialArray());
+        int maxElement = maxMin.maxTwoDimElement(twoDimentionalarray);
+        view.showNumber(maxElement,strings.getMaxArrayElement());
+
+        /*End of activities with two-dimentional Array*/
     }
 }
